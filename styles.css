@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #23272A;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+* {
+    transition: all 0.3s ease;
+}
+
+.foto-perfil {
+    margin-top: 20px;
+}
+
+.foto-perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff1e56;
+    box-shadow: 0 0 20px #ff1e56;
+}
+
+#titulo {
+    color: #b30735;
+    font-size: 2em;
+    margin-top: 10px;
+    text-shadow: 0 0 10px #ff1e56;
+    position: relative;
+    display: inline-block;
+}
+
+#titulo:hover {
+    text-shadow: 0 0 20px #ff1e56, 0 0 30px #ff1e56;
+}
+
+.botoes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botoes button {
+    padding: 15px 30px;
+    font-size: 1em;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+#botao-sim {
+    background-color: #8d72da;
+    box-shadow: 0 0 10px #8d72da;
+}
+
+#botao-sim:hover {
+    box-shadow: 0 0 20px #8d72da;
+}
+
+#botao-nao {
+    background-color: #ff3838;
+    box-shadow: 0 0 10px #ff3838;
+}
+
+#botao-nao:hover {
+    box-shadow: 0 0 20px #ff3838;
+}
+
+.midia {
+    display: block;
+    width: 300px;
+    max-width: 90%;
+    border: 5px solid #b30735;
+    box-shadow: 0 0 20px #b30735;
+    cursor: pointer;
+    margin: 20px auto 0 auto;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.midia.expanded {
+    width: 90%;
+    height: auto;
+}
+
+.subtitulo, .subtitulo-escuro {
+    display: block;
+    color: #b30735;
+    font-size: 1.5em;
+    margin: 20px auto 0 auto;
+    text-shadow: 0 0 10px #ff1e56;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.subtitulo-escuro {
+    color: #8540ad;
+}
+
+.subtitulo:hover, .subtitulo-escuro:hover {
+    text-shadow: 0 0 20px #ffad61, 0 0 30px #ffad61;
+}
+
+#botao-surpresa {
+    display: block;
+    padding: 15px 30px;
+    font-size: 1em;
+    color: white;
+    background-color: #675cf4;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+    box-shadow: 0 0 10px #675cf4;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+#botao-surpresa:hover {
+    box-shadow: 0 0 20px #675cf4;
+}
+
+.visivel {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: all 0.6s ease-out;
+}
+
+@media only screen and (max-width: 600px) {
+    #titulo {
+        font-size: 1.5em;
+    }
+    .botoes button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .foto-perfil img {
+        width: 100px;
+        height: 100px;
+    }
+    .midia {
+        width: 90%;
+    }
+    .subtitulo, .subtitulo-escuro {
+        font-size: 1.2em;
+    }
+}
